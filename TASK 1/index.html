@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Mukta:wght@400;500;700&family=Open+Sans:wght@500&family=Raleway&family=Ubuntu:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="icono.min.css">
+        <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: rgb(61, 2, 54);
+        color: white;
+        font-family: 'Mukta', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 77px;
+        background-color: rgb(85, 12, 76);
+        position: fixed;
+        width: -webkit-fill-available;
+        margin-top: -30px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0px 25px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: rgb(243, 160, 233);
+        font-size: 18px;
+    }
+
+    .left {
+        font-size: 1.7rem;
+        color: rgb(243, 160, 233);
+    }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    /* .firstSection > div {
+        width: 35%;
+    } */
+
+    .leftSection {
+        font-size: 2.7rem;
+        width: 35%;
+    }
+
+    .rightSection img {
+        width: 70%;
+        margin: 75px;
+        border-radius: 40px;
+    }
+
+    main hr {
+        border: 0;
+        background: white;
+        height: 1px;
+        margin: 40px 80px;
+    }
+
+    .purple {
+        color: rgb(243, 160, 233);
+    }
+
+    #element {
+        color: rgb(243, 160, 233);
+    }
+
+    .secondSection {
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .secondSection h1 {
+        font-size: 1.8rem;
+    }
+
+    .secondSection .box {
+        background-color: rgb(243, 160, 233);
+        width: 2px;
+        height: 363px;
+        margin: 40px 0;
+        /* display: flex; */
+    }
+
+    .secondSection .horizontal {
+        height: 1px;
+        width: 140px;
+        background-color: rgb(243, 160, 233);
+        margin: 120px 0;
+    }
+
+    .vertical-title {
+        width: 50vw;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .vertical-desc {
+        font-size: 20px;
+        width: 80vw;
+        margin: 5px 10px;
+        color: rgb(194, 181, 181);
+    }
+
+    .secondSection .photo {
+        margin: 40px;
+    }
+
+    .aboutimg {
+        transition: transform .2s;
+        width: 400px;
+        height: 458px;
+        margin: -218px auto;
+        background-color: rgb(173, 173, 237);
+        border-radius: 70%;
+        border: 1px solid black;
+        margin-left: 625px;
+    }
+
+    .aboutimg:hover {
+        transform: scale(1.1);
+    }
+
+    /* skill section */
+    .thirdsection {
+         display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 0;
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 0; */
+    }
+
+    .thirdSection h1 {
+        font-size: 1.8rem;
+        margin: auto 100px;
+        
+    }
+
+    .skill {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 100px 100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height:35vh;
+    }
+
+    .leftskill {
+        font-size: 1.5rem;
+    }
+
+    .rightskill {
+        width: 90%;
+    }
+
+    #skill1 {
+        color: orange;
+    }
+
+    #skill2 {
+        color: orange;
+    }
+
+    #skill3 {
+        color: orange;
+    }
+
+    #skill4 {
+        color: orange;
+    }
+
+    /* smooth scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .footer-distributed {
+        background: rgb(85, 12, 76);
+        box-shadow: 0 1px 1px 0 rgb(243, 160, 233);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 55px 50px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+        width: 40%;
+    }
+
+    /* The company logo */
+
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px 'Open Sans', cursive;
+        margin: 0;
+    }
+
+    .footer-distributed h3 span {
+        color: rgb(170, 107, 228);
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+
+    .footer-distributed .footer-links a {
+        display: inline-block;
+        line-height: 1.8;
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .footer-distributed .footer-company-name {
+        color: grey;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center {
+        width: 35%;
+    }
+
+    /* .footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+} */
+
+    .footer-distributed .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p {
+        display: inline-block;
+        color: #ffffff;
+        font-weight: 400;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .footer-distributed .footer-center p a {
+        color: rgb(170, 107, 228);
+        text-decoration: none;
+        ;
+    }
+
+    .footer-distributed .footer-links a:before {
+        content: "|";
+        font-weight: 300;
+        font-size: 20px;
+        left: 0;
+        color: #fff;
+        display: inline-block;
+        padding-right: 5px;
+    }
+
+    .footer-distributed .footer-links .link-1:before {
+        content: none;
+    }
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right {
+        width: 20%;
+    }
+
+    .footer-distributed .footer-company-about {
+        line-height: 20px;
+        color: #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span {
+        display: block;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .footer-distributed .footer-icons {
+        margin-top: 25px;
+    }
+
+    .footer-distributed .footer-icons a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color: #33383b;
+        border-radius: 2px;
+
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+
+    @media (max-width: 880px) {
+
+        .footer-distributed {
+            font: bold 14px sans-serif;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .footer-distributed .footer-center i {
+            margin-left: 0;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Harsheen's portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#scrollhome">Home</a></li>
+                    <li><a href="#scrollsecondsection">About</a></li>
+                    <li><a href="#scrollskill">Skills</a></li>
+                    <li><a href="harsheen kaurCV.docx">Resume</a></li>
+                    <li><a href="#scrollfooter">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="scrollhome" class="firstSection">
+            <div class='leftSection'>
+                Hi, my name is <span class="purple">Harsheen</span>
+                <div>and I am a </div>
+                <!-- <div>Web Developer</div> -->
+                <span id="element"></span>
+            </div>
+            <div class='rightSection'>
+                <img src="web-development1.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="scrollsecondsection" class="secondSection">
+            <h1>About</h1>
+            <div class="box">
+                <div class="horizontal">
+                    <div class="vertical-title">
+                        2007 - 2019
+                    </div>
+                    <div class="vertical-desc">
+                        <div>X</div>
+                        <div>GD Goenka Public School</div>
+                        <div class="img">
+                            <img class="aboutimg" src="FE8B9882-54EF-4E0A-BB01-490AA21A8804_1_201_a.jpeg" alt="no img">
+                        </div>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <div class="vertical-title">
+                        2019 - 2021
+                    </div>
+                    <div class="vertical-desc">
+                        <div>XII</div>
+                        <div>GD Goenka Public School</div>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <div class="vertical-title">
+                        2021 - 2025
+                    </div>
+                    <div class="vertical-desc">
+                        <div>B.Tech CSE</div>
+                        <div>Guru Tegh Bahadur Institute of Technology</div>
+                    </div>
+                </div>
+                <div class="horizontal"></div>
+        </section>
+        <hr>
+        <section id="scrollskill" class="thirdSection">
+            <h1>Skills</h1>
+            <section class="skill">
+                <div class="leftskill">
+                    <div><span id="skill1"></span></div>
+                    <div><span id="skill2"></span></div>
+                    <div><span id="skill3"></span></div>
+                    <div><span id="skill4"></span></div>
+                </div>
+                <!-- <div class="skills">HTML</div>
+            <div class="skills">CSS</div>
+            <div class="skills">JS</div>
+            <div class="skills">SQL</div>
+            <div class="skills">C/C++</div> -->
+            </section>
+        </section>
+
+
+    </main>
+    <footer id="scrollfooter" class="footer-distributed">
+        <div class="footer-left">
+
+            <h3>Harsheen's <span>Portfolio</span></h3>
+
+            <p class="footer-links">
+                <a href="#scrollhome" class="link-1">Home</a>
+
+                <a href="#scrollabout">About</a>
+
+                <a href="#scrollskill">Skill</a>
+
+                <a href="#scrollfooter">Contact</a>
+            </p>
+
+            <p class="footer-company-name">©2023 Harsheen Kaur. All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Delhi</span> &nbspNew Delhi</p>
+            </div>
+
+            <div>
+                <!-- <i class="icono-iphone"></i> -->
+                <p>+91-1234567891</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="harsheenkaur1811@gmail.com">harsheenkaur1811@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>Portfolio</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+                vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="icono-facebook"></i></a>
+                <a href="#"><i class="icono-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/harsheen-kaur-83ab14228/"><i class="icono-linkedIn"></i></a>
+                <a href="#"><i class="icono-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <section class="script">
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['Web Developer'],
+                typeSpeed: 50,
+            });
+        </script>
+        <script>
+            var typed = new Typed('#skill1', {
+                strings: ['# HTML'],
+                typeSpeed: 80, startDelay: 0, showCursor: false,
+            });
+        </script>
+        <script>
+            var typed = new Typed('#skill2', {
+                strings: ['# CSS'],
+                typeSpeed: 80, startDelay: 1000, showCursor: false,
+            });
+        </script>
+        <script>
+            var typed = new Typed('#skill3', {
+                strings: ['# MY SQL'],
+                typeSpeed: 80, startDelay: 1500, showCursor: false,
+            });
+        </script>
+        <script>
+            var typed = new Typed('#skill4', {
+                strings: ['# Java Script'],
+                typeSpeed: 80, startDelay: 2200, showCursor: false,
+            });
+        </script>
+    </section>
+</body>
+
+</html>
